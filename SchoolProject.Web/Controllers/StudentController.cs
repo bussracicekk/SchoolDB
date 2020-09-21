@@ -51,6 +51,7 @@ namespace SchoolProject.Web.Controllers
             var result = _studentFacade.GetAllStudents();
             return RedirectToAction("Index");
         }
+        [HttpGet]
         public IActionResult Edit(int id)
         {
             IEnumerable<Students> student = _studentFacade.GetAllStudents(id);
